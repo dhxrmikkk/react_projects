@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+import CLOUDS from 'vanta/src/vanta.clouds'
+const App = () => {
+  useEffect(() => {
+    CLOUDS({
+      el: "#vanta",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+    })
+  }, [])
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className='h-screen flex justify-center items-center font-geist' id='vanta'>
+        <div className='flex flex-col bg-white/35 p-6 rounded-md w-96'>
+          <div className="w-full mb-10">
+            <input type="text" name="" id="" className='bg-transparent border border-black/25 p-2 rounded-md w-full' placeholder='Enter City Name' />
+          </div>
+          <div className='flex flex-col items-center justify-center'>
+            <span className='text-5xl'>26°C</span>
+            <span>Ahmedabad</span>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
