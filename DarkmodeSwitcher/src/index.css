@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: geist-black;
+  src: url(assets/Fonts/Geist-Regular.ttf);
+}
+.font-geist {
+  font-family: geist-black !important;
+}
