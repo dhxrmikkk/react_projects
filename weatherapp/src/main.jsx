@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { lazy } from 'react'
+const App = lazy(() => import('./App'));
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
