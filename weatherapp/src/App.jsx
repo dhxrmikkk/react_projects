@@ -148,45 +148,7 @@ const App = () => {
                 </div>
               </div>
               <div className='lg:w-1/3 w-full bg-black/55 p-4 text-white'>
-                <div className='w-full flex justify-center py-5'>
-                  {
-                    geoCityCondition === "Clouds"
-                      ?
-                      (
-                        <div className='flex flex-col items-center'>
-                          <i className="fa-solid fa-cloud text-5xl mb-4"></i>
-                          <span className='text-2xl'>{geoCityCondition}</span>
-                        </div>
-                      )
-                      :
-                      geoCityCondition === "Rain"
-                        ?
-                        (
-                          <div className='flex flex-col items-center'>
-                            <i className="fa-solid fa-cloud-rain text-5xl mb-4"></i>
-                            <span className='text-2xl'>{geoCityCondition}</span>
-                          </div>
-                        )
-                        :
-                        geoCityCondition === "Snow"
-                          ?
-                          (
-                            <div className='flex flex-col items-center'>
-                              <i className="fa-regular fa-snowflake text-5xl mb-4"></i>
-                              <span className='text-2xl'>{geoCityCondition}</span>
-                            </div>
-                          )
-                          :
-                          (
-                            <div className='flex flex-col items-center'>
-                              <i className="fa-solid fa-cloud text-5xl mb-4"></i>
-                              <div className='text-2xl'>{geoCityCondition}</div>
-                            </div>
-                          )
-                  }
-                </div>
-                <hr className='border-white/55' />
-                <div className='my-10'>
+                <div className='my-5 '>
                   <input
                     type="text"
                     className="bg-transparent p-2 rounded-none w-full border border-white/55 focus-visible:outline-none"
@@ -198,24 +160,102 @@ const App = () => {
                   />
                   <span className='flex justify-end my-1 text-sm'>{searchCity.length}/{maxLength}</span>
                 </div>
-                <div className='flex justify-center flex-col items-center'>
+                <div className='flex justify-center'>
+                  <span className='text-2xl mb-5'>
+                    {
+                      !displayCity
+                        ? (
+                          "--"
+                        )
+                        :
+                        (
+                          `${displayCity} , ${searchCityCountry}`
+                        )
+                    }
+                  </span>
+                </div>
+                <div className='w-full flex justify-center'>
+                  {
+                    displayCity ?
+                      (
+                        searchCityCondition === "Clouds"
+                          ?
+                          (
+                            <div className='flex flex-col items-center'>
+                              <i className="fa-solid fa-cloud text-5xl mb-4"></i>
+                              <span className='text-2xl'>{searchCityCondition}</span>
+                            </div>
+                          )
+                          :
+                          searchCityCondition === "Rain"
+                            ?
+                            (
+                              <div className='flex flex-col items-center'>
+                                <i className="fa-solid fa-cloud-rain text-5xl mb-4"></i>
+                                <span className='text-2xl'>{searchCityCondition}</span>
+                              </div>
+                            )
+                            :
+                            searchCityCondition === "Snow"
+                              ?
+                              (
+                                <div className='flex flex-col items-center'>
+                                  <i className="fa-regular fa-snowflake text-5xl mb-4"></i>
+                                  <span className='text-2xl'>{searchCityCondition}</span>
+                                </div>
+                              )
+                              :
+                              searchCityCondition === "Mist"
+                                ?
+                                (
+                                  <div className='flex flex-col items-center'>
+                                    <i className="fa-solid fa-cloud text-5xl mb-4"></i>
+                                    <div className='text-2xl'>{searchCityCondition}</div>
+                                  </div>
+                                )
+                                :
+                                searchCityCondition === "Clear"
+                                  ?
+                                  (
+                                    <div className='flex flex-col items-center'>
+                                      <i class="fa-solid fa-moon text-5xl mb-4"></i>
+                                      <div className='text-2xl'>{searchCityCondition}</div>
+                                    </div>
+                                  )
+                                  :
+                                  searchCityCondition === "Haze"
+                                    ?
+                                    (
+                                      <div className='flex flex-col items-center'>
+                                        <i class="fa-solid fa-smog text-5xl mb-4"></i>
+                                        <div className='text-2xl'>{searchCityCondition}</div>
+                                      </div>
+                                    )
+                                    :
+                                    searchCityCondition === "Thunderstorm"
+                                      ?
+                                      (
+                                        <div className='flex flex-col items-center'>
+                                          <i class="fa-solid fa-cloud-bolt text-5xl mb-4"></i>
+                                          <div className='text-2xl'>{searchCityCondition}</div>
+                                        </div>
+                                      )
+                                      :
+                                      ("")
+                      )
+                      :
+                      ("")
+                  }
+                </div>
+                {/* <hr className='border-white/55' /> */}
+
+                <div className='flex justify-center flex-col items-center my-5'>
                   {
                     displayCity
                       ?
                       (
                         <>
-                          <span className='text-2xl mb-5'>
-                            {
-                              !displayCity
-                                ? (
-                                  "--"
-                                )
-                                :
-                                (
-                                  `${displayCity} , ${searchCityCountry}`
-                                )
-                            }
-                          </span>
+
                           <div className='flex justify-between w-full items-center mb-2 py-2'>
                             <span>Temprature</span>
                             <span>
