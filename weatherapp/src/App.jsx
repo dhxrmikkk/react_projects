@@ -209,7 +209,7 @@ const App = () => {
                                 ?
                                 (
                                   <div className='flex flex-col items-center'>
-                                    <i className="fa-solid fa-cloud text-5xl mb-4"></i>
+                                    <i class="fa-solid fa-droplet text-5xl mb-4"></i>
                                     <div className='text-2xl'>{searchCityCondition}</div>
                                   </div>
                                 )
