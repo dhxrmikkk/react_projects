@@ -122,19 +122,27 @@ const Homepage = () => {
                             </div>
                         </div>
                     </section> */}
-                    <section className='bg-[#f8f8ff] px-4 sm:px-8 md:px-8 xl:px-32 2xl:px-64 py-[5rem] h-full'>
-                        <div className='w-full flex flex-col sm:flex-row sm:space-x-4 space-x-0'>
-                            <div className='sm:w-1/2 '>
+                    <section className='bg-[#f8f8ff] px-4 sm:px-8 md:px-8 xl:px-32 2xl:px-64 py-[5rem] min-h-full'>
+                        <div className='w-full flex flex-col md:flex-row md:space-x-4 space-x-0'>
+                            <div className='md:w-1/2 '>
                                 <img src={LADY_IMG} alt="" className='object-cover w-full' />
                             </div>
-                            <div className='sm:w-1/2 h-full w-full flex py-6 md:px-16 md:py-16 sm:px-8 sm:py-8 items-center'>
+                            <div className='md:w-1/2 min-h-full w-full flex py-6 md:px-8 md:py-6 items-center'>
                                 <div className='flex flex-col'>
                                     <div className='w-20 h-[0.5px] bg-black mb-10'></div>
-                                    <div className='mb-5'>
-                                        <span className='text-2xl sm:text-xl lg:text-3xl xl:text-3xl 2xl:text-3xl'>Beauty Flawless Skin</span>
+                                    <div className='mb-5 md:mb-3 lg:mb-5 xl:mb-12'>
+                                        <span className='text-2xl sm:text-4xl md:text-xl lg:text-3xl xl:text-3xl 2xl:text-5xl'>Beauty Flawless Skin</span>
+                                    </div>
+                                    <div className='mb-8 md:mb-5 lg:mb-8'>
+                                        <span className='text-sm sm:text-lg md:text-sm lg:text-[16px] xl:text-lg 2xl:text-lg'>Enim lectus mauris faucibus turpis convallis ipsum odio lorem dignissim id odio sed enim nullam venenatis erat in cursus tortor tristique aliquam nulla quis.</span>
+                                    </div>
+                                    <div className='mb-8 md:mb-5 lg:mb-8 xl:mb-12'>
+                                        <span className='text-sm sm:text-lg md:text-sm lg:text-[16px] xl:text-lg 2xl:text-lg'>Aliquam scelerisque scelerisque ac laoreet laoreet faucibus vestibulum fringilla ut aliquet dictumst dignissim id eget cras nulla venenatis dictum tristique faucibus lectus egestas aenean placerat dolor dolor phasellus eros vestibulum velit turpis ornare facilisis ante ornare.</span>
                                     </div>
                                     <div>
-                                        <span className='text-[12px] lg:text-sm'>Enim lectus mauris faucibus turpis convallis ipsum odio lorem dignissim id odio sed enim nullam venenatis erat in cursus tortor tristique aliquam nulla quis.</span>
+                                        <Link to={``}>
+                                            <button className='uppercase lg:py-3.5 py-2.5 px-6 border border-pink-500 text-pink-500  hover:bg-pink-500 hover:text-white transition-colors duration-300 ease-in-out  text-sm'>Read More</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
