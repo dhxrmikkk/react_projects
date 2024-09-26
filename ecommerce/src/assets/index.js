@@ -7,6 +7,10 @@ import PRODUCT_SIX from "./images/productimg/product6.webp";
 import PRODUCT_SEVEN from "./images/productimg/product7.webp";
 import PRODUCT_EIGHT from "./images/productimg/product8.webp";
 
+// LADY IMAGE HOMEPAGE
+
+import LADY_IMG from "./images/lady.webp";
+
 export {
   PRODUCT_ONE,
   PRODUCT_TWO,
@@ -16,4 +20,7 @@ export {
   PRODUCT_SIX,
   PRODUCT_SEVEN,
   PRODUCT_EIGHT,
+
+  //LADY IMAGE
+  LADY_IMG,
 };
