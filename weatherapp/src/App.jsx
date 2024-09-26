@@ -161,7 +161,7 @@ const App = () => {
                   <span className='flex justify-end my-1 text-sm'>{searchCity.length}/{maxLength}</span>
                 </div>
                 <div className='flex justify-center'>
-                  <span className='text-2xl mb-5'>
+                  <span className='text-2xl mb-5 capitalize'>
                     {
                       !displayCity
                         ? (
