@@ -45,10 +45,10 @@ const Header = () => {
                 pathname === "/"
                     ? "h-[95px] flex items-center lg:px-10 px-4 text-white font-geist border-b border-white/25 bg-transparent"
                     : pathname === "/about"
-                        ? "h-[95px] flex items-center px-10 text-white font-geist border-b border-white/25 bg-transparent"
+                        ? "h-[95px] flex items-center lg:px-10 px-4 text-white font-geist border-b border-white/25 bg-transparent"
                         : pathname === "/contact"
-                            ? "h-[95px] flex items-center px-10 text-white font-geist border-b border-white/25 bg-transparent"
-                            : 'h-[95px] flex items-center px-10 text-black font-geist border-b border-black/25 bg-transparent'
+                            ? "h-[95px] flex items-center lg:px-10 px-4 text-white font-geist border-b border-white/25 bg-transparent"
+                            : 'h-[95px] flex items-center lg:px-10 px-4 text-black font-geist border-b border-black/25 bg-transparent'
             }>
                 <nav className='flex justify-between w-full items-center'>
                     <button onClick={toggleSidebar} className="lg:hidden flex">
@@ -89,7 +89,7 @@ const Header = () => {
 
             {/* Sidebar */}
             <div className={`fixed top-0 left-0 h-full md:w-96 w-80  bg-white/85 text-black z-50 transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:hidden'}`}>
-                <ul className="flex flex-col space-y-8 p-6 h-screen ">
+                <ul className="flex flex-col space-y-8 p-6 h-screen font-geist">
                     <div className='flex justify-end mb-16 mt-4'>
                         <button onClick={closeSidebar}><XMarkIcon className='w-5 h-5' /></button>
                     </div>

@@ -4,6 +4,7 @@ import Header from '../Components/Header'
 import HomeHeroSection from '../Components/HomeHeroSection'
 import AboutHeroSection from '../Components/AboutHeroSection'
 import ContactHeroSection from '../Components/ContactHeroSection'
+import Footer from '../Components/Footer'
 
 const DefaultLayout = () => {
     const { pathname } = useLocation()
@@ -48,6 +49,7 @@ const DefaultLayout = () => {
                     <Outlet />
                 </div>
             </main>
+            <Footer />
         </>
     )
 }

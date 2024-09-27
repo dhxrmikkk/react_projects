@@ -6,10 +6,21 @@ import PRODUCT_FIVE from "./images/productimg/product5.webp";
 import PRODUCT_SIX from "./images/productimg/product6.webp";
 import PRODUCT_SEVEN from "./images/productimg/product7.webp";
 import PRODUCT_EIGHT from "./images/productimg/product8.webp";
-
 // LADY IMAGE HOMEPAGE
-
 import LADY_IMG from "./images/lady.webp";
+// VIDEO BG
+import VIDEO_BG from "./images/videobg.webp";
+// CUSTOMER REVIEW IMGS
+import CUSTOMER_ONE from "./images/customerreviewimg/customer1.webp";
+import CUSTOMER_TWO from "./images/customerreviewimg/customer2.webp";
+import CUSTOMER_THREE from "./images/customerreviewimg/customer3.webp";
+// IMG_GALLERY
+import GALLERIMG_ONE from "./images/img_gallery/galleryimg1.webp";
+import GALLERIMG_TWO from "./images/img_gallery/galleryimg2.webp";
+import GALLERIMG_THREE from "./images/img_gallery/galleryimg3.webp";
+import GALLERIMG_FOUR from "./images/img_gallery/galleryimg4.webp";
+import GALLERIMG_FIVE from "./images/img_gallery/galleryimg5.webp";
+import GALLERIMG_SIX from "./images/img_gallery/galleryimg6.webp";
 
 export {
   PRODUCT_ONE,
@@ -20,7 +31,19 @@ export {
   PRODUCT_SIX,
   PRODUCT_SEVEN,
   PRODUCT_EIGHT,
-
   //LADY IMAGE
   LADY_IMG,
+  //VIDEO BG
+  VIDEO_BG,
+  //CUSTOMER REVIEW
+  CUSTOMER_ONE,
+  CUSTOMER_TWO,
+  CUSTOMER_THREE,
+  //GALLERY IMG
+  GALLERIMG_ONE,
+  GALLERIMG_TWO,
+  GALLERIMG_THREE,
+  GALLERIMG_FOUR,
+  GALLERIMG_FIVE,
+  GALLERIMG_SIX,
 };
