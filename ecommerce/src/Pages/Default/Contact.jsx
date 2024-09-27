@@ -105,7 +105,7 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <FAQ />
+                        {/* <FAQ /> */}
                     </div>
                 </section>
             </ReactLenis>
