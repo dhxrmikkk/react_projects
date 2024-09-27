@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const Footer = () => {
     const { pathname } = useLocation()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <>
             <footer className='bg-[#f8f8ff] lg:pt-[7.5rem] pt-[5rem] border-t border-[#6666ff29]'>
@@ -88,7 +91,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='py-[2rem] flex justify-center font-quicksand'>
-                    <span className='text-sm text-[#646467]'>© 2024 Skin Cleanser Store. Powered by Skin Cleanser Store.</span>
+                    <span className='sm:text-sm text-[#646467] text-[12px]'>© 2024 Skin Cleanser Store. Powered by Skin Cleanser Store.</span>
                 </div>
             </footer>
         </>
