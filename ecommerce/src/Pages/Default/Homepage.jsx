@@ -24,7 +24,6 @@ import {
 
 import Card from '../../Components/Common/Card'
 import ServicesCard from '../../Components/Common/ServicesCard'
-import Footer from '../../Components/Footer'
 
 
 const Homepage = () => {
@@ -163,12 +162,13 @@ const Homepage = () => {
                                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
                                     {
                                         productData.map((items) => (
-                                            <div key={items.id}>
+                                            <div key={items.id} className='cursor-pointer'>
                                                 <Card
                                                     imgsrc={items.img}
                                                     product_category={items.category}
                                                     product_name={items.name}
                                                     product_price={items.price.toFixed(2)}
+
                                                 />
                                             </div>
                                         ))
@@ -245,7 +245,7 @@ const Homepage = () => {
                         <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
                             {
                                 lovedProduct.map((items) => (
-                                    <div key={items.id}>
+                                    <div key={items.id} className='cursor-pointer'>
                                         <Card
                                             imgsrc={items.img}
                                             product_category={items.category}

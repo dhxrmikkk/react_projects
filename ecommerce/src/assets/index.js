@@ -8,6 +8,7 @@ import PRODUCT_SEVEN from "./images/productimg/product7.webp";
 import PRODUCT_EIGHT from "./images/productimg/product8.webp";
 // LADY IMAGE HOMEPAGE
 import LADY_IMG from "./images/lady.webp";
+import LADY_IMG2 from "./images/lady2.webp";
 // VIDEO BG
 import VIDEO_BG from "./images/videobg.webp";
 // CUSTOMER REVIEW IMGS
@@ -33,6 +34,7 @@ export {
   PRODUCT_EIGHT,
   //LADY IMAGE
   LADY_IMG,
+  LADY_IMG2,
   //VIDEO BG
   VIDEO_BG,
   //CUSTOMER REVIEW

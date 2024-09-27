@@ -1,9 +1,12 @@
 import React from 'react'
+import { ReactLenis } from 'lenis/react'
 
 const Shop = () => {
     return (
         <>
-            demo
+            <ReactLenis root>
+                Shop Page
+            </ReactLenis>
         </>
     )
 }

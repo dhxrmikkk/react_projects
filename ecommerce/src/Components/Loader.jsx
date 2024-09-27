@@ -13,7 +13,7 @@ const Loader = () => {
                     color="#ff4899"
                     ariaLabel="oval-loading"
                     wrapperStyle={{}}
-                    wrapperClass=""
+                    wrapperclassName=""
                     secondaryColor={`#fff`}
 
                 /> */}
@@ -23,7 +23,7 @@ const Loader = () => {
                     color="#ff4899"
                     ariaLabel="infinity-spin-loading"
                     wrapperStyle={{}}
-                    wrapperClass=""
+                    wrapperclassName=""
                     secondaryColor={`#fff`}
                 />
             </div>
