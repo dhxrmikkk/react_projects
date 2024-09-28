@@ -188,16 +188,19 @@ const Homepage = () => {
                         </div>
                     </section> */}
 
-                    <div className='relative w-full h-full'>
-                        <video ref={videoRef} src={VIDEO} className='w-full h-auto md:w-full md:h-[720px] object-cover ' />
+                    <div className="relative w-full h-full">
+                        <video ref={videoRef} src={VIDEO} className="w-full h-auto md:w-full md:h-[720px] object-cover" />
                         <button
-                            className='uppercase absolute z-50 bottom-[45%] left-1/2 transform -translate-x-1/2 lg:py-3.5 py-2.5 md:px-10 px-4 border border-white bg-white text-pink-500 transition-colors duration-300 ease-in-out text-[12px] md:text-sm font-quicksand tracking-widest font-semibold whitespace-nowrap sm:min-w-[247.92px] sm:max-w-[247.92px] w-fit fouce:outline-none'
+                            className="uppercase absolute z-50 bottom-[45%] left-1/2 transform -translate-x-1/2 lg:py-3.5 py-2.5 md:px-10 px-4 border border-white bg-white text-pink-500 transition-colors duration-300 ease-in-out text-[12px] md:text-sm font-quicksand tracking-widest font-semibold whitespace-nowrap sm:min-w-[247.92px] sm:max-w-[247.92px] w-fit outline-none"
                             onClick={handlePlayPause}
                         >
-                            <i className={`fa-solid fa-${isPlaying ? 'pause' : 'play'} me-2 text-sm`}></i>
-                            {isPlaying ? 'Pause the Video' : 'Watch the Video'}
+                            <i className={`fa-solid fa-${isPlaying ? 'pause' : 'play'} me-2 text-sm w-full sm:w-auto`}></i>
+                            <span className="hidden sm:inline">
+                                {isPlaying ? 'Pause the Video' : 'Watch the Video'}
+                            </span>
                         </button>
                     </div>
+
 
                     {/* ===================================== LOVED PRODUCT SECTION ===================================== */}
 
