@@ -74,7 +74,7 @@ const About = () => {
                         <div className='h-full flex flex-col justify-center  font-quicksand'>
                             <div className='flex flex-col'>
                                 <h2 className='uppercase text-[#646467] mb-10 tracking-widest'>From Founder</h2>
-                                <i class="fa-solid fa-quote-left text-3xl mb-3"></i>
+                                <i className="fa-solid fa-quote-left text-3xl mb-3"></i>
                                 <div className='mb-10'>
                                     <span className='text-xl font-semibold'>Eget porttitor facilisi nunc placerat enim luctus arcu cursus habitant vulputate venenatis iaculis nunc et at viverra viverra sociis.</span>
                                 </div>

@@ -1,15 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react'
 import {
-    PRODUCT_ONE,
-    PRODUCT_TWO,
-    PRODUCT_THREE,
-    PRODUCT_FOUR,
-    PRODUCT_FIVE,
-    PRODUCT_SIX,
-    PRODUCT_SEVEN,
-    PRODUCT_EIGHT,
     LADY_IMG,
     CUSTOMER_THREE,
     CUSTOMER_ONE,
@@ -24,68 +16,11 @@ import {
 
 import Card from '../../Components/Common/Card'
 import ServicesCard from '../../Components/Common/ServicesCard'
+import { productData } from '../productData'
 
 
 const Homepage = () => {
-    // PRODUCT DATA
-    const productData = [
-        {
-            id: 1,
-            img: PRODUCT_ONE,
-            name: "Hybrid Cleansing Balm",
-            price: 32.90,
-            category: "cleanser"
-        },
-        {
-            id: 2,
-            img: PRODUCT_TWO,
-            name: "Soothing Sunscreen Gel",
-            price: 24.50,
-            category: "sunscreens"
-        },
-        {
-            id: 3,
-            img: PRODUCT_THREE,
-            name: "Energizing Marine Lotion",
-            price: 20.50,
-            category: "Body lotion"
-        },
-        {
-            id: 4,
-            img: PRODUCT_FOUR,
-            name: "Calm Hydrating Moisturizer",
-            price: 34.90,
-            category: "Bundles"
-        },
-        {
-            id: 5,
-            img: PRODUCT_FIVE,
-            name: "Makeup Melting Cleanser",
-            price: 29.90,
-            category: "Cleanser"
-        },
-        {
-            id: 6,
-            img: PRODUCT_SIX,
-            name: "Balancing Daily Cleanser",
-            price: 34.90,
-            category: "Cleanser"
-        },
-        {
-            id: 7,
-            img: PRODUCT_SEVEN,
-            name: "Hydrating Gel Oil",
-            price: 20.00,
-            category: "Moisturizer"
-        },
-        {
-            id: 8,
-            img: PRODUCT_EIGHT,
-            name: "Cleanser Concentrate",
-            price: 30.00,
-            category: "Cleanser"
-        },
-    ]
+    const navigate = useNavigate()
 
     // MOST LOVED PRODUCT
     const lovedProduct = productData.filter((items) => {
@@ -141,6 +76,9 @@ const Homepage = () => {
             img: GALLERIMG_SIX,
         },
     ]
+    const handleProductClick = (item) => {
+        navigate(`/shop/${item.slug}`);
+    };
     return (
         <>
             <ReactLenis root>
@@ -160,19 +98,20 @@ const Homepage = () => {
                             </div>
                             <div>
                                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-                                    {
-                                        productData.map((items) => (
-                                            <div key={items.id} className='cursor-pointer'>
-                                                <Card
-                                                    imgsrc={items.img}
-                                                    product_category={items.category}
-                                                    product_name={items.name}
-                                                    product_price={items.price.toFixed(2)}
-
-                                                />
-                                            </div>
-                                        ))
-                                    }
+                                    {productData.map((item) => (
+                                        <div
+                                            key={item.id}
+                                            className="cursor-pointer"
+                                            onClick={() => handleProductClick(item)}
+                                        >
+                                            <Card
+                                                imgsrc={item.img}
+                                                product_category={item.category}
+                                                product_name={item.name}
+                                                product_price={item.price.toFixed(2)}
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -245,7 +184,7 @@ const Homepage = () => {
                         <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
                             {
                                 lovedProduct.map((items) => (
-                                    <div key={items.id} className='cursor-pointer'>
+                                    <div key={items.id} className='cursor-pointer' onClick={() => handleProductClick(items)}>
                                         <Card
                                             imgsrc={items.img}
                                             product_category={items.category}
@@ -333,7 +272,7 @@ const Homepage = () => {
                                 imgGallery.map((items) => (
                                     <div key={items.id}>
                                         <div className='relative overflow-hidden'>
-                                            <img src={items.img} alt="" className='w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-110 hover:cursor-pointer' />
+                                            <img src={items.img} alt="" className='w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-110 hover:cursor-pointer' loading="lazy" />
                                         </div>
                                     </div>
                                 ))

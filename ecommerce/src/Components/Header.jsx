@@ -48,7 +48,7 @@ const Header = () => {
                         ? "h-[95px] flex items-center lg:px-10 px-4 text-white font-geist border-b border-white/25 bg-transparent"
                         : pathname === "/contact"
                             ? "h-[95px] flex items-center lg:px-10 px-4 text-white font-geist border-b border-white/25 bg-transparent"
-                            : 'h-[95px] flex items-center lg:px-10 px-4 text-black font-geist border-b border-black/25 bg-transparent'
+                            : 'h-[95px] flex items-center lg:px-10 px-4 text-black font-geist border-b border-black/10 bg-transparent'
             }>
                 <nav className='flex justify-between w-full items-center'>
                     <button onClick={toggleSidebar} className="lg:hidden flex">

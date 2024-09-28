@@ -7,16 +7,20 @@ import {
     Homepage,
     Shop,
     About,
-    Contact
+    Contact,
+    ProductDetail,
+    ErrorPage
 } from '../Pages/index'
 
 const AppRouter = () => {
     return (
         <>
             <Routes>
+                <Route path={`*`} element={<ErrorPage />}></Route>
                 <Route element={<DefaultLayout />}>
                     <Route path='/' element={<Homepage />}></Route>
                     <Route path='/shop' element={<Shop />}></Route>
+                    <Route path='/shop/:slug' element={<ProductDetail />} />
                     <Route path='/about' element={<About />}></Route>
                     <Route path='/contact' element={<Contact />}></Route>
                 </Route>

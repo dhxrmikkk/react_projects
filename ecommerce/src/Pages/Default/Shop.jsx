@@ -6,10 +6,11 @@ const Shop = () => {
     return (
         <>
             <ReactLenis root>
-                <div className='h-32 flex items-center justify-center'>
-                    <Loader />
-                </div>
-                <span className='text-lg flex justify-center my-5 font-quicksand'>Coming Soon...</span>
+                <main>
+                    <section className='px-4 sm:px-8 md:px-16 xl:px-32 2xl:px-64'>
+                        a
+                    </section>
+                </main>
             </ReactLenis>
         </>
     )
