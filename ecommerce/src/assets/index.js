@@ -23,6 +23,9 @@ import GALLERIMG_FOUR from "./images/img_gallery/galleryimg4.webp";
 import GALLERIMG_FIVE from "./images/img_gallery/galleryimg5.webp";
 import GALLERIMG_SIX from "./images/img_gallery/galleryimg6.webp";
 
+//VIDEO
+import VIDEO from "../assets/videos/video.mp4";
+
 export {
   PRODUCT_ONE,
   PRODUCT_TWO,
@@ -48,4 +51,6 @@ export {
   GALLERIMG_FOUR,
   GALLERIMG_FIVE,
   GALLERIMG_SIX,
+  //VIDEO
+  VIDEO,
 };

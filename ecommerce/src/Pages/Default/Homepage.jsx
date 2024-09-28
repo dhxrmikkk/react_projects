@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react'
+import { useRef, useState } from 'react';
 import {
     LADY_IMG,
     CUSTOMER_THREE,
@@ -12,6 +13,7 @@ import {
     GALLERIMG_FOUR,
     GALLERIMG_FIVE,
     GALLERIMG_SIX,
+    VIDEO,
 } from '../../assets/index'
 
 import Card from '../../Components/Common/Card'
@@ -21,6 +23,18 @@ import { productData } from '../productData'
 
 const Homepage = () => {
     const navigate = useNavigate()
+
+    const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const handlePlayPause = () => {
+        if (isPlaying) {
+            videoRef.current.pause();
+        } else {
+            videoRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
 
     // MOST LOVED PRODUCT
     const lovedProduct = productData.filter((items) => {
@@ -164,7 +178,7 @@ const Homepage = () => {
 
                     {/* ===================================== VIDEO BG SECTION ===================================== */}
 
-                    <section className='bg-[url(./assets/images/videobg.webp)] bg-center bg-cover h-[720px]'>
+                    {/* <section className='bg-[url(./assets/images/videobg.webp)] bg-center bg-cover h-[720px]'>
                         <div className='h-full flex items-center justify-center'>
                             <Link to={`/`}>
                                 <button className='uppercase lg:py-3.5 py-2.5 px-10 border border-white text-white hover:bg-white hover:text-pink-500 transition-colors duration-300 ease-in-out text-sm font-quicksand tracking-widest font-semibold'>
@@ -172,7 +186,18 @@ const Homepage = () => {
                                 </button>
                             </Link>
                         </div>
-                    </section>
+                    </section> */}
+
+                    <div className='relative w-full h-full'>
+                        <video ref={videoRef} src={VIDEO} className='w-full h-auto md:w-full md:h-[720px] object-cover ' />
+                        <button
+                            className='uppercase absolute z-50 bottom-[40%] sm:bottom-1/2 md:bottom-1/2 lg:bottom-1/2 xl:bottom-1/2 2xl:bottom-1/2 left-1/2 transform -translate-x-1/2 lg:py-3.5 py-2.5 md:px-10 px-6 border border-white bg-white text-pink-500 transition-colors duration-300 ease-in-out text-[12px] md:text-sm font-quicksand tracking-widest font-semibold whitespace-nowrap'
+                            onClick={handlePlayPause}
+                        >
+                            <i className={`fa-solid fa-${isPlaying ? 'pause' : 'play'} me-2 text-sm`}></i>
+                            {isPlaying ? 'Pause the Video' : 'Watch the Video'}
+                        </button>
+                    </div>
 
                     {/* ===================================== LOVED PRODUCT SECTION ===================================== */}
 

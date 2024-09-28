@@ -22,7 +22,7 @@ const Header = () => {
         }
 
         return () => {
-            document.body.style.overflow = 'auto' // Cleanup when component unmounts
+            document.body.style.overflow = 'auto'
         }
     }, [isSidebarOpen])
 
