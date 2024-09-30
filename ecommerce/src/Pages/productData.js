@@ -7,6 +7,8 @@ import {
   PRODUCT_SIX,
   PRODUCT_SEVEN,
   PRODUCT_EIGHT,
+  PRODUCT_NINE,
+  PRODUCT_TEN,
 } from "../assets/index";
 
 const productsList = [
@@ -64,6 +66,20 @@ const productsList = [
     img: PRODUCT_EIGHT,
     name: "Cleanser Concentrate",
     price: 30.0,
+    category: "Cleanser",
+  },
+  {
+    id: 9,
+    img: PRODUCT_NINE,
+    name: "Antiaging Skin Oil",
+    price: 44.9,
+    category: "Moisturizer",
+  },
+  {
+    id: 10,
+    img: PRODUCT_TEN,
+    name: "Refreshing Cleansing Balm",
+    price: 44.0,
     category: "Cleanser",
   },
 ];

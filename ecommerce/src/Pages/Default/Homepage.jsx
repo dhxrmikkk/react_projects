@@ -37,10 +37,14 @@ const Homepage = () => {
     };
 
     // MOST LOVED PRODUCT
-    const lovedProduct = productData.filter((items) => {
+    const filterProduct = productData.filter((items) => {
         return items.id % 2 !== 0
     })
 
+    const newArrivals = productData.slice(-8);
+
+    // Loved Products - Display last 4 products
+    const lovedProduct = filterProduct.slice(-4);
     // SERVICE DATA
     const serviceData = [
         {
@@ -112,7 +116,7 @@ const Homepage = () => {
                             </div>
                             <div>
                                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-                                    {productData.map((item) => (
+                                    {newArrivals.slice().reverse().map((item) => (
                                         <div
                                             key={item.id}
                                             className="cursor-pointer"
@@ -178,18 +182,9 @@ const Homepage = () => {
 
                     {/* ===================================== VIDEO BG SECTION ===================================== */}
 
-                    {/* <section className='bg-[url(./assets/images/videobg.webp)] bg-center bg-cover h-[720px]'>
-                        <div className='h-full flex items-center justify-center'>
-                            <Link to={`/`}>
-                                <button className='uppercase lg:py-3.5 py-2.5 px-10 border border-white text-white hover:bg-white hover:text-pink-500 transition-colors duration-300 ease-in-out text-sm font-quicksand tracking-widest font-semibold'>
-                                    <i className="fa-brands fa-youtube me-2"></i>Watch the Videos
-                                </button>
-                            </Link>
-                        </div>
-                    </section> */}
 
                     <div className="relative w-full h-full">
-                        <video ref={videoRef} src={VIDEO} className="w-full h-auto md:w-full md:h-[720px] object-cover" />
+                        <video ref={videoRef} src={VIDEO} className="w-full h-auto md:w-full md:h-[720px] object-cover overflow-hidden" />
                         <button
                             className="uppercase absolute z-50 bottom-[45%] left-1/2 transform -translate-x-1/2 lg:py-3.5 py-2.5 md:px-10 px-4 border border-white bg-white text-pink-500 transition-colors duration-300 ease-in-out text-[12px] md:text-sm font-quicksand tracking-widest font-semibold whitespace-nowrap sm:min-w-[247.92px] sm:max-w-[247.92px] w-fit outline-none"
                             onClick={handlePlayPause}
@@ -211,7 +206,7 @@ const Homepage = () => {
                         </div>
                         <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
                             {
-                                lovedProduct.map((items) => (
+                                lovedProduct.slice().reverse().map((items) => (
                                     <div key={items.id} className='cursor-pointer' onClick={() => handleProductClick(items)}>
                                         <Card
                                             imgsrc={items.img}

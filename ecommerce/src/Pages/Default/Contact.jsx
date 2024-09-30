@@ -137,7 +137,7 @@ const Contact = () => {
                                 <h3 className='md:text-4xl text-2xl'>Have Any Question?</h3>
                                 <span className='w-full my-8'>Odio turpis pellentesque non volutpat cursus mauris, convallis velit eu tristique blandit eget.</span>
                                 <div className='w-full bg-black/15 h-[0.5px] my-7'></div>
-                                <span className='uppercase text-sm tracking-widest'>Frequently Asked Questions</span>
+                                {/* <span className='uppercase text-sm tracking-widest'>Frequently Asked Questions</span> */}
                             </div>
                         </div>
                         <div className='md:w-2/3 w-full'>
@@ -154,6 +154,7 @@ const Contact = () => {
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
                                             autoComplete='off'
+                                            required
 
                                         />
                                     </div>
@@ -167,6 +168,7 @@ const Contact = () => {
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             autoComplete='off'
+                                            required
 
                                         />
                                     </div>
@@ -180,6 +182,7 @@ const Contact = () => {
                                             onChange={(e) => setMessage(e.target.value)}
                                             rows={3}
                                             autoComplete='off'
+                                            required
 
                                         />
                                     </div>
