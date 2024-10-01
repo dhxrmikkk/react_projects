@@ -1,8 +1,10 @@
 import { Bars2Icon, ShoppingBagIcon, UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useCartContext } from '../Context/CartContext';
 
 const Header = () => {
+    const { cart } = useCartContext()
     const { pathname } = useLocation()
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
@@ -81,7 +83,17 @@ const Header = () => {
                     </div>
                     <div className='flex space-x-6 items-center'>
                         <button><UserIcon className='h-6 w-6' /></button>
-                        <Link to='/cart'> <button className='hidden lg:flex'><ShoppingBagIcon className='h-6 w-6' /></button></Link>
+                        <Link to='/cart'>
+                            <button className='hidden lg:flex relative'>
+                                <ShoppingBagIcon className='h-6 w-6' />
+                                {cart.length > 0 && (
+                                    <span className='absolute px-2 py-1 text-[10px] -top-3 -right-4 bg-black text-white w-fit rounded-full flex items-center justify-center'>
+                                        {cart.length}
+                                    </span>
+                                )}
+                            </button>
+                        </Link>
+
                     </div>
                 </nav>
             </header>

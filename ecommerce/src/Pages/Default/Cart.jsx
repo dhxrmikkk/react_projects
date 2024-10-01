@@ -62,7 +62,7 @@ const Cart = () => {
                                 </tbody>
                             </table>
                         ) : (
-                            <h2 className='flex justify-center text-xl uppercase items-center h-96 ps-20'>OOPS ! Cart is Empty</h2>
+                            <h2 className='flex justify-center md:text-lg uppercase items-center h-96 ps-0 md:ps-0 lg:ps-16'>OOPS ! Cart is Empty</h2>
                         )}
                     </div>
                 </section>
