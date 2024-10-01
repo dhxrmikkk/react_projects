@@ -9,7 +9,8 @@ import {
     About,
     Contact,
     ProductDetail,
-    ErrorPage
+    ErrorPage,
+    Cart
 } from '../Pages/index'
 
 const AppRouter = () => {
@@ -23,6 +24,7 @@ const AppRouter = () => {
                     <Route path='/shop/:slug' element={<ProductDetail />} />
                     <Route path='/about' element={<About />}></Route>
                     <Route path='/contact' element={<Contact />}></Route>
+                    <Route path='/cart' element={<Cart />}></Route>
                 </Route>
             </Routes>
         </>

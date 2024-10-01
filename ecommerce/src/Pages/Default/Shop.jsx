@@ -28,7 +28,7 @@ const Shop = () => {
 
         return filteredProducts;
     };
-
+    0
     const filteredProducts = getFilteredProducts();
 
     const paginatedData = filteredProducts.slice(

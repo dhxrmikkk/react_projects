@@ -104,7 +104,7 @@ const Homepage = () => {
 
                     {/* ===================================== NEW ARRIVAL SECTION ===================================== */}
 
-                    <section className='px-4 sm:px-8 md:px-16 xl:px-32 2xl:px-64 '>
+                    <section className='px-4 sm:px-8 md:px-16 xl:px-32 2xl:px-64'>
                         <div className='lg:py-[7.5rem] py-[4rem] font-quicksand'>
                             <div className='flex justify-between items-center mb-10'>
                                 <span className='lg:text-4xl text-2xl'>New Arrivals</span>
@@ -155,7 +155,7 @@ const Homepage = () => {
                                         <span className='text-sm sm:text-lg md:text-sm lg:text-[16px] xl:text-lg 2xl:text-lg'>Aliquam scelerisque scelerisque ac laoreet laoreet faucibus vestibulum fringilla ut aliquet dictumst dignissim id eget cras nulla venenatis dictum tristique faucibus lectus egestas aenean placerat dolor dolor phasellus eros vestibulum velit turpis ornare facilisis ante ornare.</span>
                                     </div>
                                     <div>
-                                        <Link to={``}>
+                                        <Link to={`/about`}>
                                             <button className='uppercase lg:py-3.5 py-2.5 px-6 border border-pink-500 text-pink-500  hover:bg-pink-500 hover:text-white transition-colors duration-300 ease-in-out text-sm xl:text-sm font-semibold'>Read More</button>
                                         </Link>
                                     </div>

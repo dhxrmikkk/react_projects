@@ -81,8 +81,7 @@ const Header = () => {
                     </div>
                     <div className='flex space-x-6 items-center'>
                         <button><UserIcon className='h-6 w-6' /></button>
-                        <div className='text-lg hidden lg:flex'>$ 0.00</div>
-                        <button className='hidden lg:flex'><ShoppingBagIcon className='h-6 w-6' /></button>
+                        <Link to='/cart'> <button className='hidden lg:flex'><ShoppingBagIcon className='h-6 w-6' /></button></Link>
                     </div>
                 </nav>
             </header>
@@ -107,8 +106,7 @@ const Header = () => {
                     </li>
                     <li>
                         <div className='w-full flex space-x-4 mt-6 items-center'>
-                            <button><ShoppingBagIcon className='h-6 w-6 text-lg' /></button>
-                            <div className='text-lg'>$ 0.00</div>
+                            <Link to='/cart' onClick={closeSidebar}><button><ShoppingBagIcon className='h-6 w-6 text-lg' /></button></Link>
                         </div>
                     </li>
                 </ul>
