@@ -10,7 +10,9 @@ import {
     Contact,
     ProductDetail,
     ErrorPage,
-    Cart
+    Cart,
+    Login,
+    Register
 } from '../Pages/index'
 
 const AppRouter = () => {
@@ -18,6 +20,8 @@ const AppRouter = () => {
         <>
             <Routes>
                 <Route path={`*`} element={<ErrorPage />}></Route>
+                <Route path={`/login`} element={<Login />}></Route>
+                <Route path={`/register`} element={<Register />}></Route>
                 <Route element={<DefaultLayout />}>
                     <Route path='/' element={<Homepage />}></Route>
                     <Route path='/shop' element={<Shop />}></Route>

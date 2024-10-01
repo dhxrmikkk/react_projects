@@ -82,7 +82,9 @@ const Header = () => {
                         <span className='capitalize font-normal lg:text-4xl text-3xl lg:me-[10rem]'>Flawless</span>
                     </div>
                     <div className='flex space-x-6 items-center'>
-                        <button><UserIcon className='h-6 w-6' /></button>
+                        <Link to='/login'>
+                            <UserIcon className='h-6 w-6' />
+                        </Link>
                         <Link to='/cart'>
                             <button className='hidden lg:flex relative'>
                                 <ShoppingBagIcon className='h-6 w-6' />

@@ -10,4 +10,18 @@ const Contact = lazy(() => import("./Default/Contact"));
 const ProductDetail = lazy(() => import("./Default/ProductDetail"));
 const ErrorPage = lazy(() => import("../Pages/Other/ErrorPage"));
 
-export { Homepage, Shop, Cart, About, Contact, ProductDetail, ErrorPage };
+// auth pages
+
+const Login = lazy(() => import("../Pages/Auth/Login"));
+const Register = lazy(() => import("../Pages/Auth/Register"));
+export {
+  Homepage,
+  Shop,
+  Cart,
+  About,
+  Contact,
+  ProductDetail,
+  ErrorPage,
+  Login,
+  Register,
+};
